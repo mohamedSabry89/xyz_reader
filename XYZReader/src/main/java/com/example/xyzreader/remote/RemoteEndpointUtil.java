@@ -51,6 +51,8 @@ public class RemoteEndpointUtil {
                 .build();
 
         Response response = client.newCall(request).execute();
+        Log.d("LOG", "the response is " + response.body().string());
         return response.body().string();
+
     }
 }
